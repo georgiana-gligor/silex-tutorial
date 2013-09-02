@@ -11,11 +11,7 @@ $app->register(new MonologServiceProvider(), array(
 ));
 
 $app
-    ->match('/', function () use ($app) {
-    	$app['monolog']->addInfo('Logging example in the status route');
-
-    	return 'Up and running';
-    })
+    ->match('/', 'Tutorial\Controller\Status::index')
     ->method('GET|POST');
 
 return $app;
