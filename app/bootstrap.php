@@ -4,6 +4,8 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 
 $app = new Silex\Application;
 
-// we'll add behaviour here
+$app->get('/', function () {
+	return 'Up and running.';
+});
 
 return $app;
