@@ -1,2 +1,5 @@
 # ignore Composer-related folders
 vendor/*
+
+# ignore logs
+logs/*
